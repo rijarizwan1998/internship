@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+* {box-sizing: border-box;  font-family: Arial, Helvetica, sans-serif;}
+input[type=text], input[type=password] {
+  width:400px;
+  padding: 16px;
+  margin: 5px 0 20px 0;
+  display:block;
+  border:none;
+  background: #f1f1f1;
+}
+
+hr {
+  border: 2px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+button {
+  background-color: #4273ce;
+  color: white;
+  padding: 14px 20px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.8;
+}
+
+
+button:hover {
+  opacity:1;
+}
+
+.signupbtn {
+  text-align:center;
+  width: 50%;
+  margin-left: 25%;
+}
+
+
+.container {
+  padding: 16px;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+@media screen and (max-width: 300px) {
+  .signupbtn {
+   
+     width: 100%;
+  }
+}
+form {
+    display:table;/* shrinks to fit content */
+    margin:auto;
+}
+body, html {   
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display:table;
+}
+.cen{
+    top: 50%;
+    left: 50%;
+    margin-left: 50px;
+}
+</style>
+
+
+
+<head>
+<title> Sigup </title>
+</head>
+
+<body>
+    <div class="cen">
+    <form action="/action_page.php" style="border:20px solid rgb(226, 226, 226)">
+<div class="container" >
+<h1 style="color:dodgerblue"> Sign Up: </h1>
+<p> Fill the following to create an account: </p>
+    <hr>
+    <label for="email"><b>Email:</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password:</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+    <label for="psw-repeat"><b>Confirm Password:</b></label>
+    <input type="password" placeholder="Confirm Password" name="psw-repeat" required>
+    <p>Already have an account? Go to <a href="#" style="color:dodgerblue">Login</a>.</p>
+
+    <div class="clearfix">
+        
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+
+</div>
+</form>
+</div>
+</body>
+
+</html>
