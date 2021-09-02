@@ -18,11 +18,16 @@ function openNav() {
 //   }
 
 function openForm() {
-    document.getElementById("myForm").style.display = "block";
+    //document.getElementById("myForm").style.display = "block";
+    $("#myForm").slideDown();
+
   }
   
   function closeForm() {
-    document.getElementById("myForm").style.display = "none";
+    //document.getElementById("myForm").style.display = "none";
+    $("#myForm").slideUp();
+
+
   }
 
 var data=[
@@ -91,9 +96,10 @@ function addrow(fname, lname, email, pass, age, row1){
     var td = document.createElement('td');
    // td.setAttribute("id", row.toString());
     var btn1=document.createElement("button");
-    btn1.innerText="delete";
+    btn1.innerText="x";
     btn1.setAttribute("id",row1);
-    btn1.setAttribute("status", "0");
+    //btn1.setAttribute("status", "0");
+    btn1.setAttribute("class", "button button2");
     td.appendChild(btn1);
     tr.appendChild(td);
 
@@ -102,46 +108,51 @@ function addrow(fname, lname, email, pass, age, row1){
     var td = document.createElement('td');
     
     var btn2=document.createElement("button");
-    btn2.innerText="edit";
+    btn2.innerText="Edit";
     btn2.setAttribute("id", "edit");
-    
+    btn2.setAttribute("class", "button button2");
+    btn2.setAttribute("id", "edit"+ row1 );
     td.appendChild(btn2);
     tr.appendChild(td);
     body.appendChild(tr);
-    
+    debugger;
 
 }
 
 function loadData()
 {
 
-var row1=0;
-for(var k in data)
-{   
+  var row1=0;
+  for(var k in data)
+  {   
 
-    var fname=data[k].FirstName;
-    var lname=data[k].LastName;
-    var email=data[k].email;
-    var pass=data[k].password;
-    var age=data[k].Age;
+      var fname=data[k].FirstName;
+      var lname=data[k].LastName;
+      var email=data[k].email;
+      var pass=data[k].password;
+      var age=data[k].Age;
 
-    console.log(fname);
-    //var row=0;
-   
-  addrow(fname, lname, email, pass, age,row1);
-  //debugger;
-  //$("#"+ row1).on("click", "button", );
-   $(document).on('click', '#' + row1, function(){
-       //alert("hello");
-    //    var ff=document.getElementById(row1).parentElement.id;
-    this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);
-       
-});
-  row1++;
+      console.log(fname);
+      //var row=0;
+    
+    addrow(fname, lname, email, pass, age,row1);
+    //debugger;
+    //$("#"+ row1).on("click", "button", );
+    $(document).on('click', '#' + row1, function(){
+        //alert("hello");
+      //    var ff=document.getElementById(row1).parentElement.id;
+      this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);      
+  });
+
+    
+    row1++;
+
+  }
 
 }
 
-}
+
+
 
 function SubmitUser(){
     debugger;
@@ -158,6 +169,15 @@ function SubmitUser(){
      this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);
      //alert("delete");
     });
+
+
+}
+
+
+function editUser(){
+
+
+
 
 
 }
