@@ -8,7 +8,7 @@ import ExpenseItem from './component/ExpenseItem';
 const ITEM_LIST=[
     {
     title: "Kitkat",
-    price:10,
+    price:200,
     date:new Date(2021,7,26)
 
     },
@@ -20,7 +20,7 @@ const ITEM_LIST=[
     {
       title: "iPhone 12",
       price:1099,
-      date:new Date(2021,7,26)
+      date:new Date(2021,4,26)
     }
     
 ]

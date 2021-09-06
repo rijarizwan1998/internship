@@ -1,0 +1,18 @@
+
+.container1{
+
+    display: flex;
+    justify-content: space-around;
+    height: 10rem;
+    text-align: center;
+    background-color: #430c4bea;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    color: rgba(131, 61, 172, 0.699);
+    border-radius:12px ;
+    width: 95%;
+    margin:auto;
+    padding: 1rem;
+    
+
+    
+}
